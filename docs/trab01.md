@@ -19,4 +19,5 @@ O trabalho 01 vale 2pts e deverá ser entregue até às 23h59m59s de 22/04/2019.
 Para realizar a entrega vocẽ deverá:
 
 * Marcar o seu repositório com a tag _trab01_;
-* Atualizar o arquivo _loja-virtual.md_ conforme as informações pedidas.   
+* Atualizar o arquivo _loja-virtual.md_ conforme as informações pedidas;
+* Incluir um arquivo Dockerfile para empacotamento da sua aplicação (veja exemplo no exercício 01 da disciplina).
