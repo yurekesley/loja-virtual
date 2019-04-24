@@ -9,10 +9,10 @@ import br.com.yurekesley.lojavirtual.model.Produto;
 
 @Stateful
 public class CarrinhoBean implements ICarrinho {
-	
+
 	@Inject
 	private IEstoque estoque;
-	
+
 	public List<Produto> getProdutosEmEstoque() {
 		return this.estoque.getProdutos();
 	}
@@ -20,15 +20,13 @@ public class CarrinhoBean implements ICarrinho {
 	@Override
 	public void adcionarProduto(Produto produto) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void removerProduto(Produto removerProduto) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	
 
 }

@@ -13,6 +13,6 @@ public interface IEstoque {
 	public void adcionarProduto(Produto produto);
 	
 	public void removerProduto(Produto removerProduto);
-	
-	public int totalDeProdutos();
+
+	public Integer getQuantidade();
 }

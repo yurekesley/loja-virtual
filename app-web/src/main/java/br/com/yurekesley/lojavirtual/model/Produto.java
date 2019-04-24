@@ -3,19 +3,12 @@ package br.com.yurekesley.lojavirtual.model;
 public class Produto {
 
 	private String codigo;
-
 	private String nome;
-
 	private Double valor;
-	
+
 	public Produto(String codigo, String nome, Double valor) {
-		
 		this.codigo = codigo;
-		
 		this.nome = nome;
-		
-		this.valor = valor;
-		
 	}
 
 	public String getCodigo() {

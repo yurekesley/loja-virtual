@@ -5,10 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
 import javax.enterprise.context.ApplicationScoped;
 
 import br.com.yurekesley.lojavirtual.model.Produto;
 
+@Startup
+@Singleton
 @ApplicationScoped
 public class EstoqueBean implements IEstoque {
 
@@ -47,16 +51,16 @@ public class EstoqueBean implements IEstoque {
 		}
 	}
 
+	private boolean produtoExisteNoEstoque(Produto produto) {
+		return this.produtos.contains(produto);
+	}
+
 	@Override
-	public int totalDeProdutos() {
+	public Integer getQuantidade() {
 		if (this.produtos.equals(null)) {
 			return 0;
 		}
 		return this.produtos.size();
-	}
-
-	private boolean produtoExisteNoEstoque(Produto produto) {
-		return this.produtos.contains(produto);
 	}
 
 }

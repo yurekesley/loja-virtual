@@ -5,5 +5,7 @@ import java.util.List;
 import br.com.yurekesley.lojavirtual.model.Produto;
 
 public interface IProduto {
-	public List<Produto> getProdutos();
+	public List<Produto> getProdutosEmEstoque();
+	
+	public Integer getQuantidadeProdutosEmEstoque();
 }
