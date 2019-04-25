@@ -9,6 +9,7 @@ public class Produto {
 	public Produto(String codigo, String nome, Double valor) {
 		this.codigo = codigo;
 		this.nome = nome;
+		this.valor = valor;
 	}
 
 	public String getCodigo() {

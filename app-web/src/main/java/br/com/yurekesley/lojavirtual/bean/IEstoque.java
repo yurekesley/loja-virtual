@@ -12,7 +12,9 @@ public interface IEstoque {
 	
 	public void adcionarProduto(Produto produto);
 	
-	public void removerProduto(Produto removerProduto);
+	public Produto getProdutoPorID(String produtoID);
+	
+	public void removerProduto(Produto produto);
 
 	public Integer getQuantidade();
 }

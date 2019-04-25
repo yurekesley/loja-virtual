@@ -18,26 +18,48 @@ public class ProdutoServlet extends HttpServlet {
 
 	@Inject
 	private ControleProduto controllerProduto;
-	
+
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		PrintWriter writer = response.getWriter();
+		
 		writer.append("<html>");
 		writer.append("<body>");
 
 		writer.append("<h1>Lista de Produtos</h1>");
 
+		writer.append("<table>");
+		writer.append("<tr>");
+		writer.append("<th>");
+		writer.append("Código");
+		writer.append("</th>");
+		writer.append("<th>");
+		writer.append("Produto");
+		writer.append("</th>");
+		writer.append("<th>");
+		writer.append("</th>");
+		writer.append("</tr>");
+
 		for (Produto produto : this.controllerProduto.getProdutosEmEstoque()) {
-			writer.append("<li>");
+			writer.append("<tr>");
+			writer.append("<td>");
+			writer.append(produto.getCodigo());
+			writer.append("</td>");
+			writer.append("<td>");
 			writer.append(produto.getNome());
-			writer.append("</li>");
+			writer.append("</td>");
+
+			writer.append("</tr>");
 
 		}
 
-	    writer.append("<h3>Quantidade de produtos em estoque: " +
-		this.controllerProduto.getQuantidadeProdutosEmEstoque() + "</h3>");
+		writer.append("</table>");
+
+		writer.append("<h3>Quantidade de produtos em estoque: "
+				+ this.controllerProduto.getQuantidadeProdutosEmEstoque() + "</h3>");
 
 		writer.append("</body>");
 		writer.append("</html>");
